@@ -3,7 +3,7 @@ import java.util.*;
 class Hash_map_collections {
 
     public static void main(String args[]) {
-        Map map = new HashMap();
+        Map<Integer, String> map = new HashMap<Integer, String>();
 
         map.put(1, "abhinav");
         map.put(2, "abhishek");
@@ -15,8 +15,12 @@ class Hash_map_collections {
 
         Iterator itr = set.iterator();
 
-        while (itr.hasNext()) {
-            System.out.println(itr.next());
+        for (Map.Entry m : map.entrySet()) {
+            System.out.println(m.getKey() + " " + m.getValue());
         }
+        // while (itr.hasNext()) {
+
+        //     System.out.println(itr.next());
+        // }
     }
 }
