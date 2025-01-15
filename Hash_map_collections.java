@@ -8,19 +8,18 @@ class Hash_map_collections {
         map.put(1, "abhinav");
         map.put(2, "abhishek");
         map.put(3, "new_collection");
+        map.put(4, "null_input");
 
         System.out.println(map);
 
+        // Non iterable
+
         Set set = map.entrySet();
 
-        Iterator itr = set.iterator();
+        for (Map.Entry entrySet : map.entrySet()) {
+            System.out.println(entrySet.getKey() + " " + entrySet.getValue());
 
-        for (Map.Entry m : map.entrySet()) {
-            System.out.println(m.getKey() + " " + m.getValue());
+            break;
         }
-        // while (itr.hasNext()) {
-
-        //     System.out.println(itr.next());
-        // }
     }
 }
