@@ -1,17 +1,33 @@
 import java.util.*;
+import java.util.Scanner;
 
-public class LinkedList1{
-    public static void main(String args[]){
-        LinkedList<Integer> list = new LinkedList<Integer>();
-        list.add(34);
-        list.add(35);
-        list.add(36);
-        list.add(37);
+public class LinkedList1 {
 
-        Iterator<Integer> itr = list.iterator();
+    public static List<Integer> newList(List<Integer> newlist, int n) {
+        Scanner sc = new Scanner(System.in);
 
-        while(itr.hasNext()){
-            System.out.print(itr.next());
+        for (int i = 0; i < n; i++) {
+            newlist.add(sc.nextInt());
         }
+
+        sc.close();
+
+        return newlist;
+    }
+
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the new list elements");
+
+        int n = sc.nextInt();
+
+        List<Integer> mylist = new ArrayList<>();
+
+        mylist = newList(mylist, n);
+
+        System.out.println(mylist);
+
+        sc.close();
     }
 }

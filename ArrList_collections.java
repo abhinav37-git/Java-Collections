@@ -1,43 +1,24 @@
 import java.util.*;
+import java.util.Scanner;
 
 class ArrList_collections {
 
-    public static void main(String args[]) {
-        List<String> friends = new ArrayList();
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        List<Integer> newlist = new ArrayList<>();
 
-        friends.add("Abhinav");
-        friends.add("Abhishek");
-        friends.add("Saransh");
+        System.out.print("Enter the number of elements: ");
+        int n = sc.nextInt();
 
-        for (String friend : friends) {
-            System.out.println(friend);
+        for (int i = 0; i < n; i++) {
+            newlist.add(sc.nextInt());
         }
 
-        friends.set(2, "Router");
-        System.out.println(friends);
+        Iterator<Integer> itr = newlist.iterator();
 
-        System.out.println(friends.contains("Router"));
-
-//        //New list
-        List<String> list2 = new ArrayList();
-        list2.add("Joshi");
-        list2.add("Monal");
-
-        Iterator<String> it = friends.iterator();
-        while(it.hasNext()){
-            System.out.println(it.next());
+        System.out.println("Elements in the list:");
+        while (itr.hasNext()) {
+            System.out.println(itr.next() + "");
         }
-
-
-
-
-
-//        Iterator<String> it = new friends.iterator();
-//
-//        while (it.hasNext()){
-//            System.out.println(it.next());
-//        }
-//
-//        System.out.println(friends.get(1));
     }
 }

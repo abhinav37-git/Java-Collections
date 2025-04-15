@@ -8,13 +8,13 @@ class Linkedlist_collections {
         list.add("Abhinav");
         list.add("Abhishek");
 
-        System.out.println(list);
+        // System.out.println(list);
 
         Iterator<String> itr = list.iterator();
 
         while (itr.hasNext()) {
             System.out.println(itr.hasNext());
-            break;
+            // break;
         }
     }
 }
